@@ -52,7 +52,11 @@ def main():
                 print("Game Over")
                 return
 
-        # player.draw(screen)
+            for shot in shots:
+                if shot.collide(a):
+                    shot.kill()
+                    a.kill()
+
         for d in drawable:
             d.draw(screen)
 
